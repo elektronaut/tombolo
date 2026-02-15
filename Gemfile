@@ -8,7 +8,7 @@ gemspec
 
 group :test do
   gem "execjs"
-  gem "minitest", "~> 5.0"
+  gem "minitest", "~> 6.0"
   gem "minitest-reporters"
 end
 

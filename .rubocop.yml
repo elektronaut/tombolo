@@ -1,0 +1,28 @@
+---
+plugins:
+  - rubocop-minitest
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  Exclude:
+    - "vendor/**/*"
+
+Rails:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "*.gemspec"
+    - "test/**/*_test.rb"
+
+Metrics/MethodLength:
+  Exclude:
+    - "test/**/*_test.rb"

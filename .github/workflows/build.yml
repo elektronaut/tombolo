@@ -65,14 +65,20 @@ jobs:
         run: bundle exec rake test
 
   vitest:
-    name: Vitest
+    name: Vitest (React ${{ matrix.react }})
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        react: ["18", "19"]
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
         with:
           version: 9
           run_install: true
+      - name: Install React ${{ matrix.react }}
+        if: matrix.react != '19'
+        run: pnpm add -D react@${{ matrix.react }} react-dom@${{ matrix.react }} @types/react@${{ matrix.react }} @types/react-dom@${{ matrix.react }}
       - name: Run tests
         run: pnpm test
 

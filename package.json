@@ -1,6 +1,8 @@
 {
   "name": "tombolo",
   "version": "0.9.0",
+  "description": "Mount React components in Rails views with optional server-side rendering",
+  "keywords": ["react", "rails", "ssr", "server-side-rendering", "components"],
   "type": "module",
   "exports": {
     ".": {

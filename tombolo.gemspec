@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.authors     = ["Inge Jørgensen"]
   s.email       = ["inge@elektronaut.no"]
   s.homepage    = "https://github.com/elektronaut/tombolo"
-  s.summary     = "Minimal React component mounting for Rails"
-  s.description = "Drop-in replacement for react-rails with minimal " \
-                  "footprint. Provides a view helper and optional SSR " \
-                  "via ExecJS."
+  s.summary     = "Mount React components in Rails views with optional SSR"
+  s.description = "Lightweight alternative to react-rails for mounting " \
+                  "React components in Rails views with optional " \
+                  "server-side rendering via ExecJS."
   s.license     = "MIT"
 
   s.files = Dir["{lib}/**/*", "LICENSE", "Rakefile", "README.md"]

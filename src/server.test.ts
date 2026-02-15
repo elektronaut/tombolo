@@ -8,7 +8,7 @@ function Greeting({ name }: { name?: string }) {
 }
 
 const components: Record<string, ComponentType<Record<string, unknown>>> = {
-  Greeting: Greeting as ComponentType<Record<string, unknown>>,
+  Greeting: Greeting as ComponentType<Record<string, unknown>>
 };
 
 beforeEach(() => {

@@ -12,7 +12,7 @@ function Other() {
 
 const components: Record<string, ComponentType<Record<string, unknown>>> = {
   Greeting: Greeting as ComponentType<Record<string, unknown>>,
-  Other: Other as ComponentType<Record<string, unknown>>,
+  Other: Other as ComponentType<Record<string, unknown>>
 };
 
 function addNode(

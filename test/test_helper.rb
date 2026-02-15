@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "minitest/mock"
 require "active_support"
 require "active_support/core_ext/object/json"
 require "active_support/testing/assertions"

@@ -16,10 +16,7 @@ export function mount(components: ComponentMap, scope: ParentNode = document) {
     if (!name) continue;
 
     const component = components[name];
-    if (!component) {
-      console.warn(`Tombolo: Component "${name}" not found`);
-      continue;
-    }
+    if (!component) continue;
 
     const props = node.dataset.reactProps
       ? (JSON.parse(node.dataset.reactProps) as Record<string, unknown>)

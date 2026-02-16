@@ -65,13 +65,11 @@ describe("mount", () => {
     });
   });
 
-  it("warns on missing component", () => {
+  it("silently skips unknown components", () => {
     const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
     addNode("NonExistent");
     mount(components);
-    expect(warn).toHaveBeenCalledWith(
-      'Tombolo: Component "NonExistent" not found'
-    );
+    expect(warn).not.toHaveBeenCalled();
     warn.mockRestore();
   });
 

@@ -1,6 +1,6 @@
 {
   "name": "tombolo",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "Mount React components in Rails views with optional server-side rendering",
   "keywords": [
     "react",

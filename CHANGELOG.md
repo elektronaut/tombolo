@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.10.0](https://github.com/elektronaut/tombolo/compare/tombolo/v0.9.1...tombolo/v0.10.0) (2026-02-17)
+
+
+### Features
+
+* add named render scopes for isolated SSR ([b7eae8e](https://github.com/elektronaut/tombolo/commit/b7eae8e1da742417dedb5f190416eceb1d7479c8))
+
+
+### Bug Fixes
+
+* skip unknown components silently in mount() ([68f13ee](https://github.com/elektronaut/tombolo/commit/68f13eec4ed470833843bbfbb21b48c418d9b6e4))
+
 ## [0.9.1](https://github.com/elektronaut/tombolo/compare/tombolo-v0.9.0...tombolo/v0.9.1) (2026-02-15)
 
 

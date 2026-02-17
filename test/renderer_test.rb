@@ -5,7 +5,6 @@ require "tempfile"
 
 class RendererTest < Minitest::Test
   def setup
-    Tombolo.reset!
     @tempfiles = []
   end
 
@@ -14,12 +13,8 @@ class RendererTest < Minitest::Test
   end
 
   def test_raises_on_missing_server_bundle
-    Tombolo.configure do |config|
-      config.server_bundle = "nonexistent.js"
-    end
-
     require "tombolo/renderer"
-    renderer = Tombolo::Renderer.new
+    renderer = Tombolo::Renderer.new(server_bundle: "nonexistent.js")
 
     assert_raises(RuntimeError) { renderer.render("Greeting", "{}") }
   end
@@ -32,12 +27,8 @@ class RendererTest < Minitest::Test
       }
     JS
 
-    Tombolo.configure do |config|
-      config.server_bundle = create_temp_bundle(bundle)
-    end
-
     require "tombolo/renderer"
-    renderer = Tombolo::Renderer.new
+    renderer = Tombolo::Renderer.new(server_bundle: create_temp_bundle(bundle))
     result = renderer.render("Greeting", '{"name":"Tombolo"}')
 
     assert_includes result, "Hello Tombolo"
@@ -51,12 +42,8 @@ class RendererTest < Minitest::Test
       }
     JS
 
-    Tombolo.configure do |config|
-      config.server_bundle = create_temp_bundle(bundle)
-    end
-
     require "tombolo/renderer"
-    renderer = Tombolo::Renderer.new
+    renderer = Tombolo::Renderer.new(server_bundle: create_temp_bundle(bundle))
 
     threads = 10.times.map do |i|
       Thread.new do

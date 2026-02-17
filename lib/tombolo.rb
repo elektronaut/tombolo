@@ -15,16 +15,20 @@ module Tombolo
       yield configuration
     end
 
-    def renderer
-      @renderer ||= begin
+    def renderer(name = :default)
+      @renderers ||= {}
+      @renderers[name] ||= begin
+        path = configuration.server_bundles[name]
+        raise ArgumentError, "No server bundle configured for #{name.inspect}" unless path
+
         require "tombolo/renderer"
-        Renderer.new
+        Renderer.new(server_bundle: path)
       end
     end
 
     def reset!
       @configuration = nil
-      @renderer = nil
+      @renderers = nil
     end
   end
 end

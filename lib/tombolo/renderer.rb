@@ -10,7 +10,8 @@ end
 
 module Tombolo
   class Renderer
-    def initialize
+    def initialize(server_bundle:)
+      @server_bundle = server_bundle
       @mutex = Mutex.new
       @context = nil
     end
@@ -28,10 +29,9 @@ module Tombolo
     end
 
     def bundle_source
-      path = Tombolo.configuration.server_bundle
-      raise "Tombolo server bundle not found: #{path}" unless File.exist?(path)
+      raise "Tombolo server bundle not found: #{@server_bundle}" unless File.exist?(@server_bundle)
 
-      console_polyfill + File.read(path)
+      console_polyfill + File.read(@server_bundle)
     end
 
     def console_polyfill

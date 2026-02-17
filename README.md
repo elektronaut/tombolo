@@ -150,6 +150,28 @@ Tombolo.configure do |config|
 end
 ```
 
+#### Named render scopes
+
+If your app needs multiple SSR bundles with different sets of components, you
+can register named render scopes. Each scope gets its own isolated ExecJS
+runtime:
+
+```ruby
+Tombolo.configuration.server_bundles[:admin] = "app/assets/builds/admin/prerender.js"
+Tombolo.configuration.server_bundles[:storefront] = "app/assets/builds/storefront/prerender.js"
+```
+
+Then reference the scope by name:
+
+```erb
+<%= react_component("Dashboard", prerender: :admin, props: { ... }) %>
+<%= react_component("ProductGrid", prerender: :storefront, props: { ... }) %>
+<%= react_component("Greeting", prerender: true, props: { ... }) %>  <%# uses :default %>
+```
+
+`prerender: true` uses the `:default` bundle. `prerender: :name` uses a named
+bundle.
+
 ## Configuration
 
 ```ruby
@@ -157,9 +179,12 @@ Tombolo.configure do |config|
   # Convert snake_case prop keys to camelCase (default: false)
   config.camelize_props = true
 
-  # Path to the server-side JS bundle for SSR
+  # Path to the default server-side JS bundle for SSR
   # (default: "app/assets/builds/prerender.js")
   config.server_bundle = "app/assets/builds/prerender.js"
+
+  # Named server bundles for isolated SSR render scopes
+  # config.server_bundles[:admin] = "path/to/admin/prerender.js"
 end
 ```
 
@@ -203,9 +228,9 @@ making it callable from ExecJS. Used in server entry points for SSR.
 
 Renders a `<div>` with `data-react-component` and `data-react-props`
 attributes. When `prerender: true`, the component is rendered on the server
-via ExecJS and the HTML is placed inside the div. Pass `camelize_props: true`
-to convert snake_case prop keys to camelCase, or set it globally in the
-configuration.
+via ExecJS using the `:default` bundle. Pass a Symbol (e.g. `prerender: :admin`)
+to use a named render scope instead. Pass `camelize_props: true` to convert
+snake_case prop keys to camelCase, or set it globally in the configuration.
 
 #### `Tombolo.configure { |config| ... }`
 

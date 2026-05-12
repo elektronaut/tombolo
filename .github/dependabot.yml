@@ -36,8 +36,11 @@ updates:
     schedule:
       interval: "weekly"
       day: "tuesday"
-      time: "06:00"
+      time: "05:30"
       timezone: "Europe/Oslo"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     groups:
       all-dependencies:
         patterns:

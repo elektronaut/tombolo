@@ -10,10 +10,8 @@ export function mount(components, scope = document) {
         if (!name)
             continue;
         const component = components[name];
-        if (!component) {
-            console.warn(`Tombolo: Component "${name}" not found`);
+        if (!component)
             continue;
-        }
         const props = node.dataset.reactProps
             ? JSON.parse(node.dataset.reactProps)
             : {};

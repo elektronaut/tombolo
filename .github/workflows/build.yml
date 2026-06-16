@@ -17,7 +17,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     steps:
       - uses: actions/checkout@v6.0.3
-      - uses: ruby/setup-ruby@v1.310.0
+      - uses: ruby/setup-ruby@v1.313.0
         with:
           bundler-cache: true
           ruby-version: "4.0"
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6.0.3
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@v6.0.8
         with:
           version: latest
           run_install: true
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6.0.3
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@v6.0.8
         with:
           version: latest
           run_install: true
@@ -57,7 +57,7 @@ jobs:
         ruby: ["3.3", "3.4", "4.0"]
     steps:
       - uses: actions/checkout@v6.0.3
-      - uses: ruby/setup-ruby@v1.310.0
+      - uses: ruby/setup-ruby@v1.313.0
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
@@ -72,7 +72,7 @@ jobs:
         react: ["18", "19"]
     steps:
       - uses: actions/checkout@v6.0.3
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@v6.0.8
         with:
           version: latest
           run_install: true
@@ -112,7 +112,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6.0.3
-      - uses: ruby/setup-ruby@v1.310.0
+      - uses: ruby/setup-ruby@v1.313.0
         with:
           ruby-version: "4.0"
           bundler-cache: true
@@ -124,7 +124,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6.0.3
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@v6.0.8
         with:
           version: latest
           run_install: true

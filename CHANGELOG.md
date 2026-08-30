@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.1](https://github.com/elektronaut/tombolo/compare/tombolo/v0.10.0...tombolo/v0.10.1) (2026-08-30)
+
+
+### Bug Fixes
+
+* add repository URL to package.json for npm provenance ([66b7c25](https://github.com/elektronaut/tombolo/commit/66b7c257438e8b05b73da973885891eb157916b3))
+
 ## [0.10.0](https://github.com/elektronaut/tombolo/compare/tombolo/v0.9.1...tombolo/v0.10.0) (2026-02-17)
 
 

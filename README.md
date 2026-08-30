@@ -1,9 +1,8 @@
-# Tombolo
-
-[![Gem Version](https://badge.fury.io/rb/tombolo.svg)](https://badge.fury.io/rb/tombolo)
+[![Version](https://img.shields.io/gem/v/tombolo.svg?style=flat)](https://rubygems.org/gems/tombolo)
 [![npm](https://img.shields.io/npm/v/tombolo)](https://www.npmjs.com/package/tombolo)
-[![CI](https://github.com/elektronaut/tombolo/actions/workflows/build.yml/badge.svg)](https://github.com/elektronaut/tombolo/actions/workflows/build.yml)
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Build](https://github.com/elektronaut/tombolo/actions/workflows/build.yml/badge.svg)](https://github.com/elektronaut/tombolo/actions/workflows/build.yml)
+
+# Tombolo
 
 Tombolo is a lightweight alternative to
 [react-rails](https://github.com/reactjs/react-rails) for mounting React
@@ -264,8 +263,11 @@ yourself with jsbundling-rails or an equivalent.
 ## Contributing
 
 Bug reports and pull requests are welcome on
-[GitHub](https://github.com/elektronaut/tombolo).
+[GitHub](https://github.com/elektronaut/tombolo). See
+[CONTRIBUTING.md](CONTRIBUTING.md) for how to run the tests and how
+commits are formatted, and note that this project ships with a
+[code of conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
-MIT
+Released under the [MIT License](LICENSE).

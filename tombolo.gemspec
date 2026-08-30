@@ -24,6 +24,10 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", ">= 7.0"
 
   s.metadata = {
-    "rubygems_mfa_required" => "true"
+    "bug_tracker_uri" => "https://github.com/elektronaut/tombolo/issues",
+    "changelog_uri" => "https://github.com/elektronaut/tombolo/blob/main/CHANGELOG.md",
+    "documentation_uri" => "https://www.rubydoc.info/gems/tombolo",
+    "rubygems_mfa_required" => "true",
+    "source_code_uri" => "https://github.com/elektronaut/tombolo"
   }
 end

@@ -37,10 +37,10 @@ importers:
         version: 17.12.0
       happy-dom:
         specifier: ^20.9.0
-        version: 20.14.3
+        version: 20.14.5
       prettier:
         specifier: ^3.8.3
-        version: 3.9.6
+        version: 3.9.8
       react:
         specifier: ^19.2.5
         version: 19.3.0
@@ -55,7 +55,7 @@ importers:
         version: 8.70.0(eslint@9.39.5(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.9.3)
       vitest:
         specifier: ^4.1.0
-        version: 4.1.11(@types/node@26.5.1)(happy-dom@20.14.3)(vite@7.3.6(@types/node@26.5.1))
+        version: 4.1.11(@types/node@26.5.1)(happy-dom@20.14.5)(vite@7.3.6(@types/node@26.5.1))
 
 packages:
 
@@ -1051,8 +1051,8 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  happy-dom@20.14.3:
-    resolution: {integrity: sha512-0KMb/Eh8rsd+aMNkOk5h8LkAjo9Na1aksnEGmsuZf+GXl6UkAdIi0VbUHU7d59lXhNmawODgwwuCMiZpCxwwCw==}
+  happy-dom@20.14.5:
+    resolution: {integrity: sha512-x/RzkpWO40bTjIoT30iQtt64FLLmH/iRcUCN2X//bLx7H3ifkdfPXyqsro/OYtqzIAhiLMMA7mmiOR9C3NOKjQ==}
     engines: {node: '>=20.0.0'}
 
   has-bigints@1.1.0:
@@ -1387,8 +1387,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.9.6:
-    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+  prettier@3.9.8:
+    resolution: {integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2828,7 +2828,7 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  happy-dom@20.14.3:
+  happy-dom@20.14.5:
     dependencies:
       '@types/node': 26.5.1
       '@types/whatwg-mimetype': 3.0.2
@@ -3169,7 +3169,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.9.6: {}
+  prettier@3.9.8: {}
 
   prop-types@15.8.1:
     dependencies:
@@ -3493,7 +3493,7 @@ snapshots:
       '@types/node': 26.5.1
       fsevents: 2.3.3
 
-  vitest@4.1.11(@types/node@26.5.1)(happy-dom@20.14.3)(vite@7.3.6(@types/node@26.5.1)):
+  vitest@4.1.11(@types/node@26.5.1)(happy-dom@20.14.5)(vite@7.3.6(@types/node@26.5.1)):
     dependencies:
       '@vitest/expect': 4.1.11
       '@vitest/mocker': 4.1.11(vite@7.3.6(@types/node@26.5.1))
@@ -3517,7 +3517,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 26.5.1
-      happy-dom: 20.14.3
+      happy-dom: 20.14.5
     transitivePeerDependencies:
       - msw
 

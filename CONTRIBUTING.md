@@ -69,7 +69,7 @@ pnpm lint
 pnpm test
 ```
 
-## Pull requests
+## Commits and tests
 
 - Add tests for any behavior you change.
 - Write commit messages using

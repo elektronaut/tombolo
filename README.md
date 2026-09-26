@@ -262,10 +262,10 @@ yourself with jsbundling-rails or an equivalent.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on
-[GitHub](https://github.com/elektronaut/tombolo). See
-[CONTRIBUTING.md](CONTRIBUTING.md) for how to run the tests and how
-commits are formatted, and note that this project ships with a
+Bug reports, feature requests, and pull requests are welcome. Read
+[CONTRIBUTING.md](CONTRIBUTING.md) first; it also covers how to run the tests
+and how commits are formatted. Report security vulnerabilities privately as
+described in [SECURITY.md](SECURITY.md). This project ships with a
 [code of conduct](CODE_OF_CONDUCT.md).
 
 ## License
